@@ -3,7 +3,6 @@ import Node from "./Node.js";
 export default class LinkedList {
   constructor() {
     this.head = null;
-    this.tail = null;
   }
 
   prepend(value) {
@@ -13,16 +12,16 @@ export default class LinkedList {
 
   toString() {
     let string = "";
-    let current = this.head;
+    let tmp = this.head;
 
     if (!this.head) return "null -> null";
 
-    while (current != this.tail) {
-      string += `(${current.value}) -> `;
-      current = current.nextNode;
+    while (tmp != null) {
+      string += `(${tmp.value}) -> `;
+      tmp = tmp.nextNode;
     }
 
-    string += this.tail ? `${this.tail.value} -> null` : "null";
+    string += "null";
 
     return string;
   }
