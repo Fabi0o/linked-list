@@ -48,4 +48,16 @@ export default class LinkedList {
 
     return size;
   }
+
+  firstNode() {
+    return this.head;
+  }
+
+  lastNode() {
+    let tmp = this.head;
+
+    while (tmp && tmp.nextNode != null) tmp = tmp.nextNode;
+
+    return tmp;
+  }
 }
