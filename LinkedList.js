@@ -72,4 +72,12 @@ export default class LinkedList {
 
     return tmp;
   }
+
+  pop() {
+    let tmp = this.head;
+
+    while (tmp && tmp.nextNode.nextNode) tmp = tmp.nextNode;
+
+    tmp.nextNode = null;
+  }
 }
