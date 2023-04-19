@@ -27,7 +27,7 @@ export default class LinkedList {
 
     if (!this.head) return "null -> null";
 
-    while (tmp != null) {
+    while (tmp) {
       string += `(${tmp.value}) -> `;
       tmp = tmp.nextNode;
     }
@@ -41,7 +41,7 @@ export default class LinkedList {
     let size = 0;
     let tmp = this.head;
 
-    while (tmp != null) {
+    while (tmp) {
       size += 1;
       tmp = tmp.nextNode;
     }
@@ -56,7 +56,7 @@ export default class LinkedList {
   lastNode() {
     let tmp = this.head;
 
-    while (tmp && tmp.nextNode != null) tmp = tmp.nextNode;
+    while (tmp && tmp.nextNode) tmp = tmp.nextNode;
 
     return tmp;
   }
