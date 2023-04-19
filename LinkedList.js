@@ -83,11 +83,24 @@ export default class LinkedList {
   contains(value) {
     let tmp = this.head;
 
-    while (tmp && tmp.nextNode) {
+    while (tmp) {
       if (tmp.value == value) return true;
       tmp = tmp.nextNode;
     }
 
     return false;
+  }
+
+  find(value) {
+    let tmp = this.head;
+    let index = 0;
+
+    while (tmp) {
+      if (tmp.value == value) return index;
+      tmp = tmp.nextNode;
+      index += 1;
+    }
+
+    return null;
   }
 }
