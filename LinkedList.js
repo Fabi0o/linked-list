@@ -103,4 +103,18 @@ export default class LinkedList {
 
     return null;
   }
+
+  insertAt(value, index) {
+    if (index >= this.size()) {
+      console.log(
+        `Index number to high! Max index number to insert for this list is ${
+          this.size() - 1
+        }`
+      );
+      return;
+    }
+
+    const newNode = new Node(value, this.at(index));
+    this.at(index - 1).nextNode = newNode;
+  }
 }
