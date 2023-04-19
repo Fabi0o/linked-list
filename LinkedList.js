@@ -60,4 +60,16 @@ export default class LinkedList {
 
     return tmp;
   }
+
+  at(index) {
+    let tmp = this.head;
+
+    for (let i = 0; i < index; i++) {
+      if (!tmp) return tmp;
+
+      tmp = tmp.nextNode;
+    }
+
+    return tmp;
+  }
 }
