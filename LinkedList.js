@@ -36,4 +36,16 @@ export default class LinkedList {
 
     return string;
   }
+
+  size() {
+    let size = 0;
+    let tmp = this.head;
+
+    while (tmp != null) {
+      size += 1;
+      tmp = tmp.nextNode;
+    }
+
+    return size;
+  }
 }
