@@ -66,7 +66,6 @@ export default class LinkedList {
 
     for (let i = 0; i < index; i++) {
       if (!tmp) return tmp;
-
       tmp = tmp.nextNode;
     }
 
@@ -79,5 +78,16 @@ export default class LinkedList {
     while (tmp && tmp.nextNode.nextNode) tmp = tmp.nextNode;
 
     tmp.nextNode = null;
+  }
+
+  contains(value) {
+    let tmp = this.head;
+
+    while (tmp && tmp.nextNode) {
+      if (tmp.value == value) return true;
+      tmp = tmp.nextNode;
+    }
+
+    return false;
   }
 }
