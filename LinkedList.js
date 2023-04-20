@@ -106,12 +106,11 @@ export default class LinkedList {
 
   insertAt(value, index) {
     if (index >= this.size()) {
-      console.log(
+      throw new Error(
         `Index number to high! Max index number to insert for this list is ${
           this.size() - 1
         }`
       );
-      return;
     }
 
     const newNode = new Node(value, this.at(index));
@@ -120,8 +119,7 @@ export default class LinkedList {
 
   removeAt(index) {
     if (index >= this.size()) {
-      console.log(`No item of index ${index}`);
-      return;
+      throw new Error(`No item of index ${index}`);
     }
 
     this.at(index - 1).nextNode = this.at(index + 1);
