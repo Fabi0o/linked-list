@@ -8,7 +8,7 @@ Start with cloning this repo on your local machine:
 
 ```sh
 $ git clone https://github.com/Fabi0o/linked-list.git
-$ cd recursion
+$ cd linked-list
 ```
 
 Then install the dependencies:
