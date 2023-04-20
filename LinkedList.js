@@ -117,4 +117,13 @@ export default class LinkedList {
     const newNode = new Node(value, this.at(index));
     this.at(index - 1).nextNode = newNode;
   }
+
+  removeAt(index) {
+    if (index >= this.size()) {
+      console.log(`No item of index ${index}`);
+      return;
+    }
+
+    this.at(index - 1).nextNode = this.at(index + 1);
+  }
 }
