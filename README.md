@@ -1,8 +1,8 @@
 # linked-list
 Implementation of linked list data structure using JS.
 ## Functionalities
-* Node class to represent each node of the LinkedList class
-* LinkedList class with all needed classes to perform operations on the list
+* Node class represents each node of the LinkedList class
+* LinkedList class with all needed methods to perform operations on the list
 ## Installation
 Start with cloning this repo on your local machine:
 
